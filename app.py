@@ -32,7 +32,7 @@ def text_transform(text):
 
     #remove stopwords and punctuation
     for i in text:
-        if i not in stopwords and i not in punctuation:
+        if i not in stop_words and i not in punctuation:
             y.append(i)
     text = y.copy()
     y.clear()
