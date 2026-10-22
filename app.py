@@ -10,7 +10,11 @@ tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model= pickle.load(open('model.pkl', 'rb'))
 
 PS = PorterStemmer()
-stopwords = set(stopwords.words("english"))
+
+# Download the required NLTK dataset
+nltk.download("stopwords", quiet=True)
+
+stop_words = set(stopwords.words("english"))
 punctuation = set(string.punctuation)
 
 def text_transform(text):
