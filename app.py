@@ -13,6 +13,7 @@ PS = PorterStemmer()
 
 # Download the required NLTK dataset
 nltk.download("stopwords", quiet=True)
+nltk.download("punkt_tab", quiet=True)
 
 stop_words = set(stopwords.words("english"))
 punctuation = set(string.punctuation)
